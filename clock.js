@@ -54,12 +54,12 @@ function analogeClock(){
     let seconds = time.getSeconds();
 
     let hRotation = 30 * hours + minutes/2;
-    let mRotation = minutes * 6;
-    let sRotation = seconds * 6;
+    let mRotation = 6 * minutes;
+    let sRotation = 6 * seconds;
 
     hr.style.transform = `rotate(${hRotation}deg)`;
     min.style.transform = `rotate(${mRotation}deg)`;
-    min.style.transform = `rotate(${sRotation}deg)`;
+    sec.style.transform = `rotate(${sRotation}deg)`;
 }
 
 setInterval(analogeClock, 1000);
